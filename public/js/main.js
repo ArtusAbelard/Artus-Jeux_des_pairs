@@ -1,9 +1,57 @@
 let theback = document.querySelectorAll(".theback")
 let btnrandom = document.querySelector("#btnrandom")
+let cartes = document.querySelectorAll(".cartes")
+let thecard = document.querySelectorAll(".thecard")
 
 let classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
-    classes=classes.sort(() => Math.random() - 0.5);
+    // classes=classes.sort(() => Math.random() - 0.5);
     
+
+btnrandom.addEventListener("click", ()=> {
+
+
+    classes=classes.sort(() => Math.random() - 0.5);
+    theback.forEach(element => {
+        
+        console.log(classes);
+        element.classList=classes.pop()
+
+    })
+    classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
+
+});
+
+
+for (let index = 0; index < cartes.length; index++) {
+    cartes[index].addEventListener("click", ()=>{
+        
+        // alert("ewa")
+    })  
+}
+
+
+
+mercistckoverflox
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // let choix1=classes.pop()
     // console.log(choix1);
     
@@ -37,9 +85,6 @@ let classes= ["theback carte1","theback carte1","theback carte2","theback carte2
     
 
 
-btnrandom.addEventListener("click", ()=> {
-
-  
     // for (let index = 0; index < theback.length; index++) {
     //     console.log(theback[index]);
     //     let classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
@@ -48,21 +93,9 @@ btnrandom.addEventListener("click", ()=> {
     //     let choix=classes.pop()
     //     console.log(choix);
 
-        
-        
-    // }})
 
-    classes=classes.sort(() => Math.random() - 0.5);
-    theback.forEach(element => {
-        
-        console.log(classes);
-        element.classList=classes.pop()
 
-        
-    })
-    classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
 
-});
 
 
     
