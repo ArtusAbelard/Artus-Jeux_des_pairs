@@ -6,7 +6,7 @@ let thecard = document.querySelectorAll(".thecard")
 let classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
 let choix =[]
 let victoire =[]
-    // classes=classes.sort(() => Math.random() - 0.5);
+   
     
 
 btnrandom.addEventListener("click", ()=> {
@@ -19,6 +19,8 @@ btnrandom.addEventListener("click", ()=> {
         
         console.log(classes);
         element.classList=classes.pop()
+        // element.setAttribute("data-card",+1)
+        // console.log(element.getAttribute("data-card"));
 
     })
     classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
@@ -28,32 +30,88 @@ btnrandom.addEventListener("click", ()=> {
 
 for (let index = 0; index < cartes.length; index++) {
     cartes[index].addEventListener("click", ()=>{
+        // thecard[index].style.transform="rotateY(180deg)";
+        thecard[index].classList.toggle("thecardrotate")
+        console.log(thecard[index].style.transform);
         
         choix.push(theback[index].getAttribute("class"))
         console.log(choix);
+        console.log(index);
+        setTimeout(()=>{
+            thecard[index].classList.toggle("thecardrotate")
+
+        },2500)
+
+
         if (choix.length==2) {
+                        
+        
             console.log(choix[0]);
             console.log(choix[1]);
+
             if (choix[0]==choix[1]) {
+                console.log(choix[0]);
+                console.log(choix[1]);
+                
                 console.log("ewaaaa");
                 victoire.push(choix[0])
                 choix=[]
                 console.log(victoire);
+                thecard[index].classList.toggle("thecardrotate")
+                // thecard[index].style.transform="rotateY(180deg)";
 
                 
             }else{
                 console.log("noooob");
                 choix=[]
+                // thecard[index].style.transform="rotateY(180deg)"
+                // thecard[indexclic].style.transform=""
+                
+                
+                
             }
             if (victoire.length==4) {
                 alert("Bravo !!")
                 victoire=[]
-            }                 
-         }  
-        })
+            }
+        }
+        })}
+
         
-    // choix=[]
-}
+
+        
+
+
+        // if (choix.length==2) {
+
+        //     console.log(choix[0]);
+        //     console.log(choix[1]);
+        //     if (choix[0]==choix[1]) {
+                
+        //         console.log("ewaaaa");
+        //         victoire.push(choix[0])
+        //         choix=[]
+        //         console.log(victoire);
+
+                
+        //     }else{
+        //         console.log("noooob");
+        //         choix=[]
+        //         thecard[0].style.transform="";
+        //         thecard[1].style.transform="";
+        //         thecard[2].style.transform="";
+        //         thecard[3].style.transform="";
+        //         thecard[4].style.transform="";
+        //         thecard[5].style.transform="";
+        //         thecard[6].style.transform="";
+        //         thecard[7].style.transform="";
+        //     }
+        //     if (victoire.length==4) {
+        //         alert("Bravo !!")
+        //         victoire=[]
+        //     }                 }  
+       
+
 
 
 
