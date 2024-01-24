@@ -1,0 +1,88 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/OIG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#titre{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 204, 0);
+}
+#section{
+    height: 60%;
+    width: 70%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 100px;
+}
+.cartes{
+    
+    width: 15%;
+    height: 49%;
+    border-radius: 15px;
+    position: relative;
+}
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    border-radius: 15px;
+}
+.thecard:active{
+    transform: rotateY(180deg);
+}
+.thefront{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background-image: url(../img/backcard.jpg);
+    background-size: cover;
+    color: #333;
+    border-radius: 15px;
+
+}
+.theback{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    
+    color: #333;
+    border-radius: 15px;
+    transform: rotateY(180deg);
+
+}
+.carte1{
+    background-image: url(../img/carte1.jpg);
+    background-position: center;
+    background-size: 96%;
+
+}
+.carte2{
+    background-image: url(../img/carte2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.carte3{
+    background-image: url(../img/carte3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.carte4{
+    background-image: url(../img/carte4.jpg);
+    background-position: center;
+    background-size: cover;
+}
