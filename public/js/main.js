@@ -72,6 +72,16 @@ for (let index = 0; index < cartes.length; index++) {
             }
             if (victoire.length==4) {
                 alert("Bravo !!")
+                thecard[0].classList.remove("thecardrotate")
+                thecard[1].classList.remove("thecardrotate")
+                thecard[2].classList.remove("thecardrotate")
+                thecard[3].classList.remove("thecardrotate")
+                thecard[4].classList.remove("thecardrotate")
+                thecard[5].classList.remove("thecardrotate")
+                thecard[6].classList.remove("thecardrotate")
+                thecard[7].classList.remove("thecardrotate")
+                thecard[8].classList.remove("thecardrotate")
+        
                 victoire=[]
             }
         }
