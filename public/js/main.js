@@ -4,12 +4,16 @@ let cartes = document.querySelectorAll(".cartes")
 let thecard = document.querySelectorAll(".thecard")
 
 let classes= ["theback carte1","theback carte1","theback carte2","theback carte2","theback carte3","theback carte3","theback carte4","theback carte4"]
+let choix =[]
+let victoire =[]
     // classes=classes.sort(() => Math.random() - 0.5);
     
 
 btnrandom.addEventListener("click", ()=> {
 
 
+    classes=classes.sort(() => Math.random() - 0.5);
+    classes=classes.sort(() => Math.random() - 0.5);
     classes=classes.sort(() => Math.random() - 0.5);
     theback.forEach(element => {
         
@@ -25,13 +29,35 @@ btnrandom.addEventListener("click", ()=> {
 for (let index = 0; index < cartes.length; index++) {
     cartes[index].addEventListener("click", ()=>{
         
-        // alert("ewa")
-    })  
+        choix.push(theback[index].getAttribute("class"))
+        console.log(choix);
+        if (choix.length==2) {
+            console.log(choix[0]);
+            console.log(choix[1]);
+            if (choix[0]==choix[1]) {
+                console.log("ewaaaa");
+                victoire.push(choix[0])
+                choix=[]
+                console.log(victoire);
+
+                
+            }else{
+                console.log("noooob");
+                choix=[]
+            }
+            if (victoire.length==4) {
+                alert("Bravo !!")
+                victoire=[]
+            }                 
+         }  
+        })
+        
+    // choix=[]
 }
 
 
 
-mercistckoverflox
+// mercistckoverflox
 
 
 
